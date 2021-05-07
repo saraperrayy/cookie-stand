@@ -5,19 +5,39 @@
     <title>Sales Data</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/app.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
 </head>
 <body>
-    <h1>Seattle</h1>
-        <ul id="seattle"></ul>
-    <h1>Tokyo</h1> 
-        <ul id="tokyo"></ul>
-    <h1>Dubai</h1>    
-        <ul id="dubai"></ul>
-    <h1>Paris</h1>
-        <ul id="paris"></ul>
-    <h1>Lima</h1>    
-        <ul id="lima"></ul>
+    <h1>Pat's Salmon Cookie Stands</h1>
+    <table id="main">
+        <thead id="t-head"></thead>
+        <tbody id="t-body">
+            <tr id="total-row"></tr>
+        </tbody>
+    </table>
+
+<br>
+
+    <form id="newCookieStand">
+        <fieldset>
+            <legend>New Cookie Stand Information</legend>
+
+            <label for="name">New Cookie Stand Location: </label>
+            <input name="name" type="text" size="15" required />
+
+            <label for="minSalesPerHour">Minimum Sales Per Hour: </label>
+            <input name="minSalesPerHour" type="text" size="15" required />
+
+            <label for="maxSalesPerHour">Maximum Sales Per Hour: </label>
+            <input name="maxSalesPerHour" type="text" size="15" required />
+
+            <label for="cookiesPerSale">Average Cookies Per Sale: </label>
+            <input name="cookiesPerSale" type="text" size="15" required />
+
+            <button type="submit">Add a New Cookie Stand</button>
+        </fieldset>
+    </form>
+
+    <script src="js/app.js"></script>
 </body>
 </html>

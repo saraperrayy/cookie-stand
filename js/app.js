@@ -33,7 +33,7 @@ this.cookiesPerHr.push(Math.ceil(this.customersPerHr[i] * this.cookiesPerSale))
 cookieStand.prototype.calcTotalDailyCookies=function() {
     let cookiesTotal = 0;
     for(let i = 0; i < hours.length; i++) {
-cookiesTotal = this.cookiesPerHr[i];
+cookiesTotal += this.cookiesPerHr[i];
     }
     return cookiesTotal;
 };
@@ -86,7 +86,7 @@ function totalAtFooter() {
     for (let i = 0; i < hours.length; i++) {
         let totalCookiePerHour = 0;
         for (let j = 0; j < allCookieStands.length; j++) {
-            totalCookiePerHour = allCookieStands[j].cookiesPerHr[i];
+            totalCookiePerHour += allCookieStands[j].cookiesPerHr[i];
         }
         standCookiePerHr.push(totalCookiePerHour);
     }
